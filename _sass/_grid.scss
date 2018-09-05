@@ -18,7 +18,7 @@
 [class*="span"] {
 	float: left;
 	margin: 0 2%;
-	@include media-query($breakpoint-mobile) {
+	@include media-query($bp-mobile) {
 		margin: 0;
 	}
 }
@@ -38,7 +38,7 @@
 .span1-4 { width: 21%; }
 .span3-4 { width: 71%; }
 
-@include media-query($breakpoint-mobile) {
+@include media-query($bp-mobile) {
 	.span1-2,
 	.span1-3,
 	.span2-3,

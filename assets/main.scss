@@ -68,13 +68,13 @@ $spacing-unit:     30px;
 $max-width:        1440px;
 
 // Breakpoints
-$breakpoint-mobile:        600px;
-$breakpoint-tablet:        900px;
-$breakpoint-desktop:       1040px;
+$bp-mobile:        600px;
+$bp-tablet:        900px;
+$bp-desktop:       1040px;
 
 // Mixins
 // Use media queries like this:
-// @include media-query($breakpoint-tablet) {
+// @include media-query($bp-tablet) {
 //     .wrapper {
 //         padding-right: $spacing-unit / 2;
 //         padding-left: $spacing-unit / 2;
@@ -104,12 +104,12 @@ $breakpoint-desktop:       1040px;
   border-radius: $radius;
 }
 
-@mixin transition($transition-property, $transition-time, $method) {
-	-webkit-transition: $transition-property $transition-time $method;
-	-moz-transition: $transition-property $transition-time $method;
-	-ms-transition: $transition-property $transition-time $method;
-	-o-transition: $transition-property $transition-time $method;
-	transition: $transition-property $transition-time $method;
+@mixin transition($property:all,$duration:.2s,$timing:linear,$delay:0s) {
+	-webkit-transition: $property $duration $timing $delay;
+	-moz-transition: $property $duration $timing $delay;
+	-ms-transition: $property $duration $timing $delay;
+  -o-transition: $property $duration $timing $delay;
+	transition: $property $duration $timing $delay;
 }
 
 // Browser Prefixes

@@ -50,6 +50,11 @@ h2 {
 p {
   font-weight: 100;
   letter-spacing: .03em;
+  margin-bottom: 0;
+  @include media-query($bp-tablet) {
+    max-width: 50ch;
+    margin-bottom: 1em;
+  }
 }
 
 #intro-text {
@@ -66,6 +71,9 @@ p {
 // Icons -------------------------------------
 .si-link {
   display: inline-block;
+  @include media-query($bp-mobile) {
+    margin: 0 1em 1em 0;
+  }
   svg {
     width: 75px;
     height: 75px;
@@ -84,6 +92,7 @@ $social:  (email, $melon),
 @each $social, $color in $social {
   .si-link.#{$social} svg {
     fill: $black;
+    @include transition(all);
     &:focus,
     &:hover {
       fill: $color;
