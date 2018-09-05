@@ -27,7 +27,7 @@ social-icons:
     </div>
     <div id="social-icons" class="group">
       {% for icon in page.social-icons %}
-        <a class="si-link {{ icon.class }}" href="{{ icon.url }}">
+        <a class="si-link {{ icon.class }}" href="{{ icon.url }}" target="_blank">
           {% include {{ icon.class | prepend: 'icons/' | append: '.svg' }} %}
           <span class="si-title">{{ icon.title }}</span>
         </a>
