@@ -1,9 +1,34 @@
 ---
 layout: default
+
+social-icons:
+  - title: Email
+    url: mailto:hello@alexlinek.com
+    class: email
+  - title: LinkedIn
+    url: https://www.linkedin.com/in/alexlinek
+    class: linkedin
+  - title: GitHub
+    url: https://github.com/alexlinek
+    class: github
+  - title: Dribbble
+    url: https://dribbble.com/alexlinek
+    class: dribbble
+  - title: CodePen
+    url: https://codepen.io/alinek/
+    class: codepen
 ---
 
 <div class="section">
   <div class="group">
     This is the homepage now ¯\_(ツ)_/¯
+  </div>
+  <div class="group">
+    {% for icon in social-icons %}
+      <a class="si-link {{ icon.class }}" href="{{ icon.url }}">
+        {% include {{ icon.class | prepend: 'images/icons/' | append: '.svg' }} %}
+        <span class="si-title vis-hide">{{ icon.title }}</span>
+      </a>
+    {% endfor %}
   </div>
 </div>

@@ -4,26 +4,37 @@
 @charset "utf-8";
 
 // @font-face
-@font-face {
-  font-family: 'bebas-neue';
-  src: url('/fonts/bebas/bebasneue_bold.eot'); /* IE9 Compat Modes */
-  src: url('/fonts/bebas/bebasneue_bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/fonts/bebas/bebasneue_bold.woff2') format('woff2'),
-       url('/fonts/bebas/bebasneue_bold.woff') format('woff'),
-       url('/fonts/bebas/bebasneue_bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
+@font-face{
+    font-family: 'geomanist';
+    src: url('fonts/geomanist/light/geomanist-light-webfont.eot');
+    src: url('fonts/geomanist/light/geomanist-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/geomanist/light/geomanist-light-webfont.woff') format('woff'),
+         url('fonts/geomanist/light/geomanist-light-webfont.ttf') format('truetype'),
+         url('fonts/geomanist/light/geomanist-light-webfont.svg#webfont') format('svg');
+    font-weight: 300;
+    font-style: normal;
 }
 
-@font-face {
-  font-family: 'bebas-neue';
-  src: url('/fonts/bebas/bebasneue_regular.eot'); /* IE9 Compat Modes */
-  src: url('/fonts/bebas/bebasneue_regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/fonts/bebas/bebasneue_regular.woff2') format('woff2'),
-       url('/fonts/bebas/bebasneue_regular.woff') format('woff'),
-       url('/fonts/bebas/bebasneue_regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+@font-face{
+    font-family: 'geomanist';
+    src: url('fonts/geomanist/regular/geomanist-regular-webfont.eot');
+    src: url('fonts/geomanist/regular/geomanist-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/geomanist/regular/geomanist-regular-webfont.woff') format('woff'),
+         url('fonts/geomanist/regular/geomanist-regular-webfont.ttf') format('truetype'),
+         url('fonts/geomanist/regular/geomanist-regular-webfont.svg#webfont') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'geomanist';
+    src: url('fonts/geomanist/bold/geomanist-bold-webfont.eot');
+    src: url('fonts/geomanist/bold/geomanist-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/geomanist/bold/geomanist-bold-webfont.woff') format('woff'),
+         url('fonts/geomanist/bold/geomanist-bold-webfont.ttf') format('truetype'),
+         url('fonts/geomanist/bold/geomanist-bold-webfont.svg#webfont') format('svg');
+    font-weight: 700;
+    font-style: normal;
 }
 
 // Colors
