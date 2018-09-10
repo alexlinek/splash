@@ -4,9 +4,10 @@
 body {
   background-color: #eee;
   background-image: url(/assets/images/tri-pat.svg);
-  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 650px;
   position: relative;
 }
 
