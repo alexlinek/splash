@@ -7,7 +7,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 650px;
+  min-height: 750px;
   position: relative;
 }
 
@@ -40,21 +40,20 @@ header {
 
 footer {
   position: absolute;
-  bottom: 2em;
+  bottom: 0;
   left: 0;
   right: 0;
   @include media-query($bp-mobile) {
-    bottom: 10px;
     left: 2.5%;
   }
 }
 
 // Text -------------------------------------
 h1 {
+  color: $grey;
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 4px;
-  color: $grey;
   text-transform: uppercase;
 }
 
@@ -79,10 +78,11 @@ p {
 }
 
 .copyright {
-  font-weight: 100;
   color: $grey;
   font-size: 14px;
+  font-weight: 100;
   letter-spacing: 2px;
+  margin-bottom: 2em;
   @include media-query($bp-mobile) {
     margin-left: 5%;
   }
@@ -118,4 +118,59 @@ $social:  (email, $melon),
       // filter: drop-shadow( 0 0 15px rgba(0,0,0,.15) );
     }
   }
+}
+
+// Pup --------------------------------------
+footer .group {
+  position: relative;
+}
+
+.husky {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  height: 300px;
+  overflow: hidden;
+  img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+}
+
+@keyframes slide-in {
+  from { bottom: -200px; }
+  to { bottom: 0; }
+}
+.husky img {
+  animation: slide-in 2.5s ease;
+}
+
+//for future fun stuff, this looks like reading right to left
+// @keyframes reading-wrong {
+//   0%, 100% { left: 15px; }
+//   10% { left: 0; }
+//   80% { left: 15px; }
+// }
+
+@keyframes shifty {
+  0%, 100% { left: 15px; }
+  10% { left: 0; }
+  90% { left: 0; }
+}
+@keyframes blink {
+  0%, 100% { height: auto; }
+  1% { height: 0; }
+  2% { height: auto; }
+}
+
+.husky .eyes,
+.husky .eyes {
+  animation:
+    shifty 6s ease infinite,
+    blink 8s linear 2s infinite,
+    slide-in 2.5s ease;
 }
